@@ -182,6 +182,17 @@
             border-radius: 2px;
         }
     </style>
+
+    <script>
+        window.addEventListener('keydown', playNote);
+
+        function playNote(e) {
+            const audio = document.createElement("AUDIO");
+            audio.setAttribute("src", `asset/piano-${e.keyCode}.mp3`)
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
 </body>
 
 </html>
